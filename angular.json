@@ -1,0 +1,133 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "dahrulihsan": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/dahrulihsan",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "public/assets/vendor/font-awesome/css/fontawesome-all.min.css",
+
+              "public/assets/vendor/animate.css/animate.min.css",
+              "public/assets/vendor/hs-megamenu/src/hs.megamenu.css",
+              "public/assets/vendor/fancybox/jquery.fancybox.css",
+              "public/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "public/assets/vendor/ion-rangeslider/css/ion.rangeSlider.css",
+              "public/assets/vendor/dzsparallaxer/dzsparallaxer.css",
+              "public/assets/vendor/slick-carousel/slick/slick.css",
+              "src/scss/theme.scss",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "public/assets/vendor/hs-megamenu/src/hs.megamenu.js",
+              "public/assets/vendor/svg-injector/dist/svg-injector.min.js",
+              "public/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+              "public/assets/vendor/fancybox/jquery.fancybox.min.js",
+              "public/assets/vendor/jquery-validation/dist/jquery.validate.min.js",
+              "public/assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js",
+              "public/assets/vendor/slick-carousel/slick/slick.js",
+              "public/assets/vendor/dzsparallaxer/dzsparallaxer.js",
+              "public/assets/js/hs.core.js",
+              "public/assets/js/components/hs.header.js",
+              "public/assets/js/components/hs.unfold.js",
+              "public/assets/js/components/hs.focus-state.js",
+              "public/assets/js/components/hs.malihu-scrollbar.js",
+              "public/assets/js/components/hs.validation.js",
+              "public/assets/js/components/hs.show-animation.js",
+              "public/assets/js/components/hs.svg-injector.js",
+              "public/assets/js/components/hs.fancybox.js",
+              "public/assets/js/components/hs.range-slider.js",
+              "public/assets/js/components/hs.slick-carousel.js",
+              "public/assets/js/components/hs.go-to.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "dahrulihsan:build:production"
+            },
+            "development": {
+              "buildTarget": "dahrulihsan:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

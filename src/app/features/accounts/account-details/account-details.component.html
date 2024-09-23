@@ -1,0 +1,763 @@
+<main id="content" role="main">
+  <!-- Hero Section -->
+  <div class="bg-light">
+    <div class="container space-1">
+      <!-- Search Jobs Form -->
+      <form class="row mb-2">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <!-- Input -->
+          <label class="d-block">
+            <span class="h4 d-block text-dark font-weight-semi-bold mb-0">what</span>
+            <small class="d-block text-secondary">job title, keywords, or company</small>
+          </label>
+          <div class="js-focus-state">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Keyword or title" aria-label="Keyword or title" aria-describedby="keywordInputAddon" value="Web developer">
+              <div class="input-group-append">
+                  <span class="input-group-text">
+                    <span class="fas fa-search" id="keywordInputAddon"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+          <!-- End Input -->
+        </div>
+
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <!-- Input -->
+          <label class="d-block">
+            <span class="h4 d-block text-dark font-weight-semi-bold mb-0">where</span>
+            <small class="d-block text-secondary">city, state, or zip code</small>
+          </label>
+          <div class="js-focus-state">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="City, state, or zip" aria-label="City, state, or zip" aria-describedby="locationInputAddon" value="United Kingdom">
+              <div class="input-group-append">
+                  <span class="input-group-text">
+                    <span class="fas fa-map-marker-alt" id="locationInputAddon"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+          <!-- End Input -->
+        </div>
+
+        <div class="col-lg-2 align-self-lg-end">
+          <button type="submit" class="btn btn-block btn-primary transition-3d-hover">Find Jobs</button>
+        </div>
+        <!-- End Checkbox -->
+      </form>
+      <!-- End Search Jobs Form -->
+    </div>
+  </div>
+  <!-- End Hero Section -->
+
+  <!-- Jobs Section -->
+  <div class="container space-2">
+    <!-- Filter -->
+    <form class="js-validate mb-2" novalidate="novalidate">
+      <ul class="list-inline d-md-flex align-items-md-center mb-0">
+        <li class="list-inline-item mb-2">
+          <!-- Select -->
+          <div class="dropdown bootstrap-select js-select dropdown-select fit-width"><select class="js-select selectpicker dropdown-select" data-width="fit" data-style="btn-soft-primary btn-xs" tabindex="-98">
+            <option value="categoryByFilterSelect1" selected="">Category</option>
+            <option value="categoryByFilterSelect2">Web</option>
+            <option value="categoryByFilterSelect3">Software</option>
+            <option value="categoryByFilterSelect4">Othere</option>
+          </select><button type="button" class="btn dropdown-toggle btn-soft-primary btn-xs" data-toggle="dropdown" role="button" title="Category"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Category</div></div> </div></button><div class="dropdown-menu " role="combobox"><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1"><ul class="dropdown-menu inner show"></ul></div></div></div>
+          <!-- End Select -->
+        </li>
+        <li class="list-inline-item mb-2">
+          <!-- Select -->
+          <div class="dropdown bootstrap-select js-select dropdown-select fit-width"><select class="js-select selectpicker dropdown-select" data-width="fit" data-style="btn-soft-primary btn-xs" tabindex="-98">
+            <option value="salaryByFilterSelect1" selected="">Salary</option>
+            <option value="salaryByFilterSelect2">$0-$2k</option>
+            <option value="salaryByFilterSelect3">$2k-$5k</option>
+            <option value="salaryByFilterSelect4">$5k-$25k</option>
+            <option value="salaryByFilterSelect5">$25k and more</option>
+          </select><button type="button" class="btn dropdown-toggle btn-soft-primary btn-xs" data-toggle="dropdown" role="button" title="Salary"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Salary</div></div> </div></button><div class="dropdown-menu " role="combobox"><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1"><ul class="dropdown-menu inner show"></ul></div></div></div>
+          <!-- End Select -->
+        </li>
+
+        <li class="list-inline-item ml-md-auto mb-2">
+          <!-- Select -->
+          <div class="dropdown bootstrap-select js-select dropdown-select fit-width"><select class="js-select selectpicker dropdown-select" data-width="fit" data-style="btn-soft-primary btn-xs" tabindex="-98">
+            <option value="sortByFilterSelect1" selected="">Sort by</option>
+            <option value="sortByFilterSelect2">Relevance</option>
+            <option value="sortByFilterSelect3">Date</option>
+          </select><button type="button" class="btn dropdown-toggle btn-soft-primary btn-xs" data-toggle="dropdown" role="button" title="Sort by"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Sort by</div></div> </div></button><div class="dropdown-menu " role="combobox"><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1"><ul class="dropdown-menu inner show"></ul></div></div></div>
+          <!-- End Select -->
+        </li>
+        <li class="list-inline-item mb-2">
+          <a class="btn btn-xs btn-soft-primary" href="jobs-grid.html">
+            <span class="fas fa-th-large mr-2"></span>
+            Grid
+          </a>
+        </li>
+        <li class="list-inline-item mb-2">
+          <a class="btn btn-xs btn-soft-primary active" href="jobs-list.html">
+            <span class="fas fa-list mr-2"></span>
+            List
+          </a>
+        </li>
+      </ul>
+    </form>
+    <!-- End Filter -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+          <div class="u-avatar mb-3 mb-sm-0 mr-4">
+            <img class="img-fluid" src="../../assets/img/160x160/img14.png" alt="Image Description">
+          </div>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h1 class="h5 mb-1">
+                  <a href="job-description.html">Senior Java Developer</a>
+                </h1>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Slack LLC
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Office</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating1DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating1Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating1Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    4.5
+                  </a>
+
+                  <div id="rating1Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating1DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">4.5</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star-half-alt"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 132 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark1">
+                  <label class="bookmark-checkbox-label" for="bookmark1"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>The role is responsible for designing, coding and modifying websites, from layout to function and according to a client's specifications. Strive to create visually appealing sites that feature user-friendly design and clear navigation.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h2 class="small text-secondary mb-0">Location</h2>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">Liverpool, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h3 class="small text-secondary mb-0">Posted</h3>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">1 day ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">35k - 45k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Fulltime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+            <span class="btn btn-icon btn-soft-primary rounded-circle mb-3 mb-sm-0 mr-4">
+              <span class="btn-icon__inner">DB</span>
+            </span>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h3 class="h5 mb-1">
+                  <a href="job-description.html">Channel Sales Director</a>
+                </h3>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Dropbox
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Remote</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating2DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating2Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating2Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    4.7
+                  </a>
+
+                  <div id="rating2Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating2DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">4.7</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star-half-alt"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 120 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark2">
+                  <label class="bookmark-checkbox-label" for="bookmark2"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>Participates in all aspects of full life cycle application development including requirements gathering, technical design, iterative development, testing, implementation and on-going support.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Location</h4>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">Leeds, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Posted</h4>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">2 days ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">55k - 65k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Contract</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+          <div class="u-avatar mb-3 mb-sm-0 mr-4">
+            <img class="img-fluid" src="../../assets/img/160x160/img9.jpg" alt="Image Description">
+          </div>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h3 class="h5 mb-1">
+                  <a href="job-description.html">Junior UX Designer</a>
+                </h3>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Dribbble
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Office</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating3DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating3Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating3Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    4.5
+                  </a>
+
+                  <div id="rating3Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating3DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">4.5</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star-half-alt"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 85 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark3">
+                  <label class="bookmark-checkbox-label" for="bookmark3"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>We are looking for an outstanding Web Developer to be responsible for coding, and completing layouts of client and internal websites. You will build websites from concept all the way to completion from the bottom up.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Location</h4>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">Manchester, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Posted</h4>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">3 days ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">15k - 30k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Contract</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+          <div class="u-avatar mb-3 mb-sm-0 mr-4">
+            <img class="img-fluid" src="../../assets/img/160x160/img11.jpg" alt="Image Description">
+          </div>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h3 class="h5 mb-1">
+                  <a href="job-description.html">Cloud Software Engineer</a>
+                </h3>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Adobe Inc
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Office</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating4DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating4Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating4Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    4.4
+                  </a>
+
+                  <div id="rating4Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating4DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">4.4</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="far fa-star"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 5 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark4">
+                  <label class="bookmark-checkbox-label" for="bookmark4"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>Partner with Marketing and Design Leads to manage multiple bodies of work and align against business goals. Clearly communicate with all stakeholders while recognizing potential risks and opportunities to obtain the best results.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Location</h4>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">London, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Posted</h4>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">3 days ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">20k - 28k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Part-time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+            <span class="btn btn-icon btn-soft-danger rounded-circle mb-3 mb-sm-0 mr-4">
+              <span class="btn-icon__inner">AB</span>
+            </span>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h3 class="h5 mb-1">
+                  <a href="job-description.html">Database Analyst</a>
+                </h3>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Airbnb Inc
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Remote</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating5DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating5Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating5Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    5.0
+                  </a>
+
+                  <div id="rating5Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating5DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">5.0</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 1809 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark5">
+                  <label class="bookmark-checkbox-label" for="bookmark5"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>We looking for a talented and enthusiastic Junior Front End Web Developer to join our busy team. The position will be an integral member of the Creative Services team, working collaboratively with Marketing and Engineering departments.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Location</h4>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">Edimbourg, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Posted</h4>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">4 days ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">40k - 49k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Contract</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <!-- Jobs -->
+    <div class="card mb-5">
+      <div class="card-body p-4">
+        <!-- Details -->
+        <div class="media d-block d-sm-flex">
+          <div class="u-avatar mb-3 mb-sm-0 mr-4">
+            <img class="img-fluid" src="../../assets/img/160x160/img15.png" alt="Image Description">
+          </div>
+
+          <div class="media-body">
+            <!-- Header -->
+            <div class="media mb-2">
+              <div class="media-body">
+                <h3 class="h5 mb-1">
+                  <a href="job-description.html">Product Director</a>
+                </h3>
+                <ul class="list-inline font-size-1 text-muted">
+                  <li class="list-inline-item">
+                    <a class="link-muted" href="company-profile.html">
+                      <span class="fas fa-building mr-1"></span>
+                      Spotify Inc
+                    </a>
+                  </li>
+                  <li class="list-inline-item text-muted">•</li>
+                  <li class="list-inline-item">Remote</li>
+                </ul>
+              </div>
+
+              <div class="d-flex ml-auto">
+                <!-- Rating -->
+                <div class="position-relative d-inline-block mr-2">
+                  <a id="rating6DropdownInvoker" class="btn btn-xs btn-soft-warning btn-pill" href="javascript:;" role="button" aria-controls="rating6Dropdown" aria-haspopup="true" aria-expanded="false" data-unfold-event="hover" data-unfold-target="#rating6Dropdown" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+                    4.4
+                  </a>
+
+                  <div id="rating6Dropdown" class="dropdown-menu dropdown-menu-right dropdown-unfold p-3 u-unfold--css-animation u-unfold--hidden fadeOut" aria-labelledby="rating6DropdownInvoker" style="width: 190px; animation-duration: 300ms;">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="text-warning mr-2">4.4</span>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item text-warning">
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="fas fa-star"></span>
+                          <span class="far fa-star"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="text-dark mb-0">Overal Rating</p>
+                    <p class="mb-0">Based on 427 reviews</p>
+                  </div>
+                </div>
+                <!-- End Rating -->
+
+                <!-- Bookmark -->
+                <div class="bookmark-checkbox d-inline-block" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save Job">
+                  <input type="checkbox" class="bookmark-checkbox-input" id="bookmark6">
+                  <label class="bookmark-checkbox-label" for="bookmark6"></label>
+                </div>
+                <!-- End Bookmark -->
+              </div>
+            </div>
+            <!-- End Header -->
+
+            <div class="mb-5">
+              <p>We focus exclusively on helping government agencies and companies implement their most critically strategic initiatives. The role of Web Developer contributes through the design, development, and maintenance of contract applications.</p>
+            </div>
+
+            <div class="d-md-flex align-items-md-center">
+              <!-- Location -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Location</h4>
+                <small class="fas fa-map-marker-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">London, UK</span>
+              </div>
+              <!-- End Location -->
+
+              <!-- Posted -->
+              <div class="u-ver-divider u-ver-divider--none-md pr-4 mb-3 mb-md-0 mr-4">
+                <h4 class="small text-secondary mb-0">Posted</h4>
+                <small class="fas fa-calendar-alt text-secondary align-middle mr-1"></small>
+                <span class="align-middle">5 days ago</span>
+              </div>
+              <!-- End Posted -->
+
+              <!-- Posted -->
+              <div class="mb-3 mb-md-0">
+                <h4 class="small text-secondary mb-0">Salary</h4>
+                <small class="fas fa-dollar-sign text-secondary align-middle mr-1"></small>
+                <span class="align-middle">40k - 49k</span>
+              </div>
+              <!-- End Posted -->
+
+              <div class="ml-md-auto">
+                <span class="btn btn-xs btn-soft-danger btn-pill">Part-time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Details -->
+      </div>
+    </div>
+    <!-- End Jobs -->
+
+    <div class="py-3"></div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center mb-0">
+        <li class="page-item ml-0">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">«</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+        <li class="page-item"><a class="page-link" href="#">12</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">»</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End Pagination -->
+  </div>
+  <!-- End Jobs Section -->
+</main>
